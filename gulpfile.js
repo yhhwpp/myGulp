@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
     imagemin = require('gulp-imagemin');
-    rename = require("gulp-rename"),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
     minifyCSS = require('gulp-minify-css'),
@@ -28,7 +27,6 @@ gulp.task('clean', function () {
     return gulp.src('build')
         .pipe(clean())
 });
-
 //合并 
 gulp.task('concat', ['minifyjs', 'minifyCSS'], function () {
     gulp.src('dist/js/*.js')
@@ -39,19 +37,13 @@ gulp.task('concat', ['minifyjs', 'minifyCSS'], function () {
         .pipe(gulp.dest('build/css'));
 });
 
-//重命名project.md 文件
-gulp.task('rename', function () {
-    return gulp.src("./Project.md")
-        .pipe(rename("README.md"))
-        .pipe(gulp.dest("./build"));
-});
-
 //压缩图片
 gulp.task('imagemin', function () {
     return gulp.src('images/*')
         .pipe(imagemin([], {}))
         .pipe(gulp.dest('build/images'));
 });
+
 gulp.task('browsersync', function () {
     browserSync.init({
         server: {
