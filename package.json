@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "css3Animation",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhhwpp/CSS3AnimationDemo.git"
+  },
+  "author": "yuanhehe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yhhwpp/CSS3AnimationDemo/issues"
+  },
+  "homepage": "https://github.com/yhhwpp/CSS3AnimationDemo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
