@@ -3,14 +3,14 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
     imagemin = require('gulp-imagemin');
-    browserSync = require('browser-sync').create(),
+browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
     minifyCSS = require('gulp-minify-css'),
     copy = require("gulp-copy");
-    
+
 //压缩js
 gulp.task('minifyjs', function (cb) {
-   return gulp.src('js/*.js')
+    return gulp.src('js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
@@ -53,7 +53,7 @@ gulp.task('browsersync', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('css/*.css').on('change', reload);
+    gulp.watch(['css/*.css', 'js/*.js']).on('change', reload);
 });
 
 //默认任务

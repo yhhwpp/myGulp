@@ -1,3 +1,3 @@
-console.log('b');
+console.log('testb');
 
 var a = 1;
